@@ -1,0 +1,21 @@
+:root {
+  --DarkGreenBlack: #014040;
+  --DarkGreen: #02735E;
+  --GreenLigth: #03A678;
+  --orangeZanahori: #F27405;
+  --RedDark: #731702;
+}
+body, html{
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#root {
+  height: 100%;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background: linear-gradient(120deg, var(--DarkGreenBlack), var(--GreenLigth));
+
+}

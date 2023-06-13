@@ -1,0 +1,17 @@
+.footer-container{
+    
+    font-size: 1rem;
+    font-family: 'Circular-Loom';
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    grid-row: 1;
+    grid-column: 2;
+}
+.footer-container p{
+    margin: 0;
+    padding: 0;
+    font-size: 1.6rem;
+    color: var(--lt-color-gray-100);
+}
