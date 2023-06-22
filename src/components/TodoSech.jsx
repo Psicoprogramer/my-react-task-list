@@ -12,12 +12,13 @@ export const TodoSech = ({addTodo}) => {
 
   const handleOnClick = () => {
     addTodo(value)
-    setValue(' ')
+    setValue('Ingrese un nuevo todo')
   }
+ 
   return (
     <div className='todo-seach_container'>
         <input value ={value} type="text" name="addNewTodo" id="addTodo" placeholder={'Add your new todo'} onChange={handleOnChage} />
-        <BtnAdd  handleOnClick={handleOnClick}/>
+        <BtnAdd  handleOnClick={handleOnClick} />
     </div>
   )
 }

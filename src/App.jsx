@@ -1,14 +1,31 @@
 import '../src/styles/App.css'
 import { Footer } from './components/Footer'
+import { Foter } from './components/Foter'
 import { Header } from './components/Header'
 import { Tasklist } from './components/Tasklist'
 import { TodoSech } from './components/todoSech'
-import { listTask } from './dataBase'
 import { useState } from 'react'
 function App() {
-  const value = 'clear all';
-  const [tasks, setTasks] = useState([listTask]);
+  const localStorageTask = localStorage.getItem('TODOS_V1');
 
+  let parsedTodos ;
+
+  if (!localStorageTask) {
+    localStorage.setItem('TODOS_V1', JSON.stringify([]))
+    parsedTodos= []
+  }else{
+     parsedTodos = JSON.parse(localStorageTask)
+  }
+
+  // creamos una funcion para actualizar los todos en el localStage
+  const saveTodosStorage  = (newTodos) => {
+    localStorage.setItem('TODOS_V1', JSON.stringify(newTodos))
+    setTasks(newTodos)
+  }
+  
+
+  const value = 'clear all';
+  const [tasks, setTasks] = useState(parsedTodos);
   const [statusTalks, setStatusTalks] = useState(false)
 
   function addTodo(nombre) {
@@ -20,12 +37,13 @@ function App() {
     }
     const newTaks = [...tasks];
     newTaks.unshift(newTodo)
-    setTasks(newTaks);
+
+    saveTodosStorage(newTaks)
   }
 
   const deleteTodo = (id) => {
     const temp = tasks.filter((item) => item.id !== id);
-    setTasks(temp);
+    saveTodosStorage(temp)
   }
 
   const changeStatus = (completed, id) => {
@@ -34,13 +52,13 @@ function App() {
       const sechTask = [...tasks];
       const item = sechTask.find((item) => item.id === id)
        item.status =  false
-      setTasks(sechTask)
+       saveTodosStorage(sechTask)
     }
      else if (!completed){
       const sechTask = [...tasks];
       const item = sechTask.find((item) => item.id === id)
        item.status = true
-      setTasks(sechTask)
+       saveTodosStorage(sechTask)
    }
   }
   const todoTotal =  tasks.length
@@ -53,6 +71,7 @@ function App() {
       <TodoSech addTodo={addTodo} />
       <Tasklist list={tasks} deleteTodo = {deleteTodo} changeStatus={changeStatus} />
       <Footer text={value} total = {todoTotal} counter = {counterTotal} />
+      <Foter/>
 
     </>
   )
