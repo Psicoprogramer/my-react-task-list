@@ -1,11 +1,11 @@
 import React from 'react'
-import '../styles/btns.css'
+import './btns.css'
 function BtnClear(promps) {
   return (
     <>
-    <bottom className='btn-clear' >
+    <button className='btn-clear' >
         {promps.text}
-    </bottom>
+    </button>
     </>
   )
 }

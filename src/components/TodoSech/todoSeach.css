@@ -4,6 +4,8 @@
     align-content: center;
     align-items: center;
     justify-content: space-around;
+    grid-row: 1;
+    grid-column: 2;
 }
 @keyframes blinking-animation {
     0% { opacity: 1; }

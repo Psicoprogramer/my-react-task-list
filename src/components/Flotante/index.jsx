@@ -1,5 +1,5 @@
-import './foter.css'
-export function Foter ({value}) {
+import './flotante.css'
+export function Flotante ({value}) {
   // const { filters } = useFilters()
 
   return (

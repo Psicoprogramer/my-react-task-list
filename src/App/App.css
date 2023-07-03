@@ -12,10 +12,21 @@ body, html{
 }
 
 #root {
-  height: 100%;
- display: grid;
- grid-template-columns: 1fr 1fr;
-  align-items: center;
+  min-height: 100%;
+  height: auto;
   background: linear-gradient(120deg, var(--DarkGreenBlack), var(--GreenLigth));
-
+}
+.appContainer{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.containerFooter{
+  display: flex;
+  padding: 1rem;
+  justify-content: flex-end;
+}
+.Cargando{
+  font-size: 2rem;
+  color: var(--orangeZanahori)
 }

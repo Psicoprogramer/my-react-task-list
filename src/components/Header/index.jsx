@@ -1,11 +1,11 @@
 import React from 'react'
-import '../styles/header.css'
+import './header.css'
 
-export const Header = (prom) => {
+export const Header = ({text}) => {
   return (
     <header className="header-container">
         <div className="title">
-            <h1>{prom.text}</h1>
+            <h1>{text}</h1>
         </div>
     </header>
   )
