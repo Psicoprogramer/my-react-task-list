@@ -4,7 +4,7 @@ export const ChangeTask = () => {
     return (
         <>
             <div className="loader1">
-                <div data-glitch="Loading..." classNameName="glitch">Loading...</div>
+                <div data-glitch="Loading..." className="glitch">Loading...</div>
             </div>
             <div className="loader">
                 <div className="bar1"></div>

@@ -7,11 +7,14 @@
     padding: 8px 24px;
     border-radius: 32px;
     opacity: .95;
-    backdrop-filter: blur(8px);
-  }
   
+  }
+  .footer p{
+    font-size: 1.3rem;
+    font-family: roboto;
+  }
   .footer span {
-    font-size: 14px;
+    font-size: 1.3rem;
     color: #09f;
     opacity: .8;
   }

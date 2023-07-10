@@ -1,7 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { SiAddthis } from 'react-icons/si';
 import './btns.css'
-export const BtnAdd = ({ handleOnClick }) => {
+import { TaskContext } from '../../context/TaskProvider';
+
+export const BtnAdd = () => {
+  const { addTodo } = useContext(TaskContext);
+  const handleOnClick = () => {
+    addTodo(value)
+    setValue('')
+  }
   return (
     <>
       <button type='submit' onClick={handleOnClick} className='btn-add'>

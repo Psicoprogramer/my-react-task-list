@@ -1,13 +1,44 @@
 import React from 'react'
 import './header.css'
+import { Container,Breadcrumb, BreadcrumbItem, BreadcrumbLink, Grid, GridItem } from '@chakra-ui/react'
+import { ChevronRightIcon } from '@chakra-ui/icons'
+import InitialFocus from '../../Modals/InitialFocus'
 
-export const Header = ({text}) => {
+export const Header = ({ text }) => {
   return (
-    <header className="header-container">
-        <div className="title">
-            <h1>{text}</h1>
-        </div>
-    </header>
+    <Container maxW='4xl'>
+    <Grid
+      w={['100%', '100%', '100%', '100%']}
+      templateColumns={['repeat(2, 1fr)', 'repeat(2, 1fr)', 'repeat(2, 1fr)', 'repeat(4, 1fr)'] }
+      gap="20px"
+      alignItems="center"
+    >
+      <GridItem w='100%' h='20' >
+        <h1>🎲  {text}</h1>
+      </GridItem>
+      <GridItem w='100%' h='10' >
+        <Breadcrumb id='container-content' spacing='8px' separator={<ChevronRightIcon color='gray.500' />}>
+          <BreadcrumbItem>
+            <BreadcrumbLink href='#'>Home</BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbItem>
+            <BreadcrumbLink href='#'>About</BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbItem >
+            <BreadcrumbLink href='#'>Contact</BreadcrumbLink>
+          </BreadcrumbItem>
+        </Breadcrumb>
+      </GridItem>
+      <GridItem w='100%' h='auto' marginLeft='30px'>
+        <a href="https://www.linkedin.com/in/brayancabrerapsicodevp/" target="_blank">
+          <img className='imgs' width='60' height='60' src="../../../public/icons8-linkedin-100.png" alt="linkeding" />
+        </a>
+      </GridItem>
+      <GridItem w='100%' h='auto' marginLeft='30px'>
+      <InitialFocus /> 
+      </GridItem>  
+    </Grid>
+  </Container>
   )
 }
 

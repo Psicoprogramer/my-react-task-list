@@ -26,7 +26,6 @@ export function useLocalStorage( itemName , inicalValue){
       }
     }, 2000)
     },[])
-  
     // creamos una funcion para actualizar los todos en el localStage
     const saveItemStorage  = (newItem) => {
       localStorage.setItem(itemName, JSON.stringify(newItem))

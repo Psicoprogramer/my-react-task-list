@@ -1,4 +1,4 @@
-:root {
+:root{
   --DarkGreenBlack: #014040;
   --DarkGreen: #02735E;
   --GreenLigth: #03A678;
@@ -11,16 +11,13 @@ body, html{
   margin: 0;
 }
 
-#root {
+#root{
   min-height: 100%;
   height: auto;
-  background: linear-gradient(120deg, var(--DarkGreenBlack), var(--GreenLigth));
+  background: linear-gradient(120deg, #efefbb
+  , #d4d3dd);
 }
-.appContainer{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-}
+
 .containerFooter{
   display: flex;
   padding: 1rem;
