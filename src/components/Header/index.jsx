@@ -31,7 +31,7 @@ export const Header = ({ text }) => {
       </GridItem>
       <GridItem w='100%' h='auto' marginLeft='30px'>
         <a href="https://www.linkedin.com/in/brayancabrerapsicodevp/" target="_blank">
-          <img className='imgs' width='60' height='60' src="../../../public/icons8-linkedin-100.png" alt="linkeding" />
+          <img className='imgs' width='60' height='60' src="/icons8-linkedin-100.png" alt="linkeding" />
         </a>
       </GridItem>
       <GridItem w='100%' h='auto' marginLeft='30px'>
